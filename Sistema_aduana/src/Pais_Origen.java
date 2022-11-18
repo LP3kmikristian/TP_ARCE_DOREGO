@@ -1,6 +1,6 @@
 import interfaces.Definir_pais;
 
-public class Pais_Origen implements Definir_pais {
+public class Pais_Origen {
 	String continente;
 	String nombre_pais;
 
@@ -20,8 +20,4 @@ public class Pais_Origen implements Definir_pais {
 		this.nombre_pais = nombre_pais;
 	}
 	
-	public Boolean isAmericaS(String continente) {
-		if(continente=="America") return true;
-		else return false;
-	}
 }
