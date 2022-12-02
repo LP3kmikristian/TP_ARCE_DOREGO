@@ -31,7 +31,7 @@ public abstract class Auditor extends Usuario implements ServicioPresupuesto, Se
 	}
 
 	@Override
-	public Usuario getPersonas(int ci) { // lista de un usuario especifico
+	public Usuario getUsuarios(int ci) { // lista de un usuario especifico
 		// TODO Auto-generated method stub
 		return null;
 	}
