@@ -2,7 +2,7 @@ package uc.lp3.grupoCC.clases;
 
 public class Impuesto {
 	String nombre_impuesto;
-	String tipo_producto;
+	String tipo_producto; // tipo de producto sobre el cual se aplica el impuesto
 	public Double porcentaje_a_cobrar;
 	
 	public String getNombre_impuesto() {

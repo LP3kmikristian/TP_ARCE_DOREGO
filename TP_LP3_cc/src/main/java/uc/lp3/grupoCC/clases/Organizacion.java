@@ -4,10 +4,17 @@ import java.util.List;
 
 public class Organizacion {
 	String nombre_organizacion;
+	String tipo_organizacion;
 	String direccion;
 	int telefono;
 	int id_organizacion;
 	
+	public String getTipo_organizacion() {
+		return tipo_organizacion;
+	}
+	public void setTipo_organizacion(String tipo_organizacion) {
+		this.tipo_organizacion = tipo_organizacion;
+	}
 	public String getNombre_organizacion() {
 		return nombre_organizacion;
 	}

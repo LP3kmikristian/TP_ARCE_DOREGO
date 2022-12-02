@@ -7,14 +7,14 @@ import uc.lp3.grupoCC.clases.Producto;
 
 public interface TipoImpuestos {
 	//@get -> devuelve la lista de los diferentes tipos de impuestos
-		List<Impuesto> getImpuestos();
+		List<Impuesto> getImpuestos(); // sistema/impuestos
 		
 		//@post -> definir un impuesto nuevo en la lista de impuestos
-		Impuesto postImpuestos(Impuesto i1);
+		Boolean postImpuestos(Impuesto i1); // sistema/impuestos
 		
 		//@put -> editar un impuesto en la lista de impuestos
-		Impuesto putImpuestos(Impuesto i1);
+		Boolean putImpuestos(Impuesto i1); // sistema/impuestos
 		
 		//@delete -> eliminar un impuesto en la lista de impuestos
-		Impuesto deleteImpuestos(Impuesto i1);
+		Boolean deleteImpuestos(Impuesto i1); //sistema/impuestos
 }
