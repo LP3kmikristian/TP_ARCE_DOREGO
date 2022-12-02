@@ -18,7 +18,7 @@ public abstract class Despachante extends Usuario implements ServicioPresupuesto
 	}
 
 	@Override
-	public Double definirPresupuestos(Producto p1, Almacenamiento a1, Transporte t1, Impuesto i1) {
+	public Double definirPresupuestos(ServicioPresupuesto p1, Almacenamiento a1, Transporte t1, Impuesto i1) {
 		// TODO Auto-generated method stub
 		return null;
 	}

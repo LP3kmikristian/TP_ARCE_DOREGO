@@ -18,26 +18,26 @@ public abstract class Administrador extends Usuario implements ServicioUsuario, 
 	}
 
 	@Override
-	public Boolean postImpuestos(Impuesto i1) {
+	public Impuesto postImpuestos(Impuesto i1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean putImpuestos(Impuesto i1) {
+	public Impuesto putImpuestos(Impuesto i1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Boolean deleteImpuestos(Impuesto i1) {
+	public Impuesto deleteImpuestos(Impuesto i1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 
 	@Override
-	public Boolean crearDespachante(Despachante d1) {
+	public Despachante crearDespachante(Despachante d1) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -10,27 +10,22 @@ import uc.lp3.grupoCC.clases.personas.Transportista;
 
 public interface ServicioUsuario {
 	
-	//@get -> devuelve una lista de todas las usuarios
-	List<Usuario> getUsuarios(); // sistema/usuarios
+	Administrador crearAdministrador(Administrador a1);
 	
-	//@get -> devuelve una sola usuario
-	Usuario getUsuarios(int ci); // sistema/usuarios
+	Auditor crearAuditor(Auditor a1);
 	
-	//@post -> crea una usuario
-	Boolean crearUsuario(Usuario p1); // sistema/usuarios
+	Despachante crearDespachante(Despachante d1);
 	
-	//@Put -> edita una usuario
-	Boolean editarUsuario(Usuario p1); // sistema/usuarios
+	Transportista crearTransportista(Transportista t1);
+	//@get -> devuelve una lista de todas las personas
+	List<Usuario> getUsuarios();
 	
-	//@Delete -> elimina un usuario 
-	Boolean eliminarUsuario(int ci); // sistema/usuarios
+	//@get -> devuelve una sola persona
+	Usuario getPersonas(int ci);
 	
+	//@post -> crea una persona
+	Usuario crearPersonas(Usuario p1);
 	
-	Boolean crearAdministrador(Administrador a1);
-	
-	Boolean crearAuditor(Auditor a1);
-	
-	Boolean crearDespachante(Despachante d1);
-	
-	Boolean crearTransportista(Transportista t1);
+	//@Put -> edita una persona
+	Usuario editarPersonas(Usuario p1);
 }

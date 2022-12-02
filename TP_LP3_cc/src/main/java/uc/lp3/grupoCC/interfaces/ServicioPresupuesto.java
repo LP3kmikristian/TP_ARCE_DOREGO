@@ -12,11 +12,11 @@ public interface ServicioPresupuesto {
 		List<Producto> getPresupuestos();
 				
 		//@post -> crea un nuevo producto
-		Double crearPresupuestos(List<Producto> l1, String nombre_presupuesto);
+		Double crearPresupuestos(List<Producto> p1, String nombre_presupuesto);
 				
 		//@delete -> elimina un producto
 		Boolean eliminarPresupuestos(String nombre_presupuesto);
 						
 		//@get -> devuelve el presupuesto total de un pedido
-		Double definirPresupuestos(Producto p1, Almacenamiento a1, Transporte t1, Impuesto i1);
+		Double definirPresupuestos(ServicioPresupuesto p1, Almacenamiento a1, Transporte t1, Impuesto i1);
 }
