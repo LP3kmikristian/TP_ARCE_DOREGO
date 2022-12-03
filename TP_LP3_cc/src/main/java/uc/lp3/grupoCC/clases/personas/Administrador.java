@@ -11,6 +11,7 @@ import uc.lp3.grupoCC.interfaces.TipoImpuestos;
 
 public abstract class Administrador extends Usuario implements ServicioUsuario, TipoImpuestos{
 		/* Se encarga de manejar los tipos de impuestos y de crear usuarios de las agencias despachantes*/
+	
 	@Override
 	public List<Impuesto> getImpuestos() {
 		// TODO Auto-generated method stub
