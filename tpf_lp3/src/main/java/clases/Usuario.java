@@ -2,7 +2,7 @@ package clases;
 
 public class Usuario {
 	String nombre_usuario;
-	int id;
+	Long id;
 	public String rol; // {"AD", "AU", "TR", "DE"}
 	
 	public String getNombre_usuario() {
@@ -11,10 +11,10 @@ public class Usuario {
 	public void setNombre_usuario(String nombre_usuario) {
 		this.nombre_usuario = nombre_usuario;
 	}
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getRol() {

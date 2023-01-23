@@ -30,11 +30,11 @@ public interface ServicioUsuario {
 	Boolean actualizarTransportista(Transportista t1);
 	
 	// @get
-	Usuario buscarUsuarios(int ci);
-	List<Usuario> buscarUsuario(String rol);
+	Usuario buscarUsuario(long id);
+	List<Usuario> buscarUsuarios(String rol);
 	 
 	//@delete
-	Boolean eliminarUsuario(int ci);
+	Boolean eliminarUsuario(long id);
 
 				
 

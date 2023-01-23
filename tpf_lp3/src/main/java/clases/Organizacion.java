@@ -5,7 +5,7 @@ public class Organizacion {
 	String tipo_organizacion;
 	String direccion;
 	int telefono;
-	int id_organizacion;
+	Long id_organizacion;
 	
 	public String getTipo_organizacion() {
 		return tipo_organizacion;
@@ -19,10 +19,10 @@ public class Organizacion {
 	public void setNombre_organizacion(String nombre_organizacion) {
 		this.nombre_organizacion = nombre_organizacion;
 	}
-	public int getId_organizacion() {
+	public long getId_organizacion() {
 		return id_organizacion;
 	}
-	public void setId_organizacion(int id_organizacion) {
+	public void setId_organizacion(long id_organizacion) {
 		this.id_organizacion = id_organizacion;
 	}
 	public String getDireccion() {

@@ -2,17 +2,20 @@ package interfaces;
 
 import java.util.List;
 
-import clases.Producto;
+import clases.Presupuesto;
 
 
 public interface ServicioPresupuesto {
 	//@get -> devuelve la lista del pedido de productos
-			List<Producto> getPresupuestos();
+	List<Presupuesto> getPresupuestos();
 					
-			//@post -> crea un nuevo producto
-			Double crearPresupuestos(List<Producto> l1, String nombre_presupuesto);
-					
-			//@delete -> elimina un producto
-			Boolean eliminarPresupuestos(String nombre_presupuesto);
+	//@post -> crea un nuevo producto
+	Boolean crearPresupuestos(Presupuesto p1);
+	
+	//@put
+	Boolean actualizarPresupuesto(Presupuesto p1);
+	
+	//@delete -> elimina un producto
+	Boolean eliminarPresupuestos(long id_presupuesto);
 
 }

@@ -4,6 +4,7 @@ public class Impuesto {
 	String nombre_impuesto;
 	String tipo_producto; // tipo de producto sobre el cual se aplica el impuesto
 	public Double porcentaje_a_cobrar;
+	public long id_impuesto;
 	
 	public String getNombre_impuesto() {
 		return nombre_impuesto;
@@ -23,5 +24,12 @@ public class Impuesto {
 	public void setPorcentaje_a_cobrar(Double porcentaje_a_cobrar) {
 		this.porcentaje_a_cobrar = porcentaje_a_cobrar;
 	}
+	public long getId_impuesto() {
+		return id_impuesto;
+	}
+	public void setId_impuesto(long id_impuesto) {
+		this.id_impuesto = id_impuesto;
+	}
+	
 
 }

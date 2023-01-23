@@ -12,14 +12,14 @@ import clases.Impuesto;
 
 public interface ServicioImpuesto {
 	//@get -> devuelve la lista de los diferentes tipos de impuestos
-			List<Impuesto> getImpuestos(); // sistema/impuestos
+	List<Impuesto> buscarImpuestos(); // sistema/impuestos
 			
-			//@post -> definir un impuesto nuevo en la lista de impuestos
-			Boolean postImpuestos(Impuesto i1); // sistema/impuestos
+	//@post -> definir un impuesto nuevo en la lista de impuestos
+	Boolean crearImpuestos(Impuesto i1); // sistema/impuestos
 			
-			//@put -> editar un impuesto en la lista de impuestos
-			Boolean putImpuestos(Impuesto i1); // sistema/impuestos
+	//@put -> editar un impuesto en la lista de impuestos
+	Boolean editarImpuestos(Impuesto i1); // sistema/impuestos
 			
-			//@delete -> eliminar un impuesto en la lista de impuestos
-			Boolean deleteImpuestos(Impuesto i1); //sistema/impuestos
+	//@delete -> eliminar un impuesto en la lista de impuestos
+	Boolean eliminarImpuestos(long id_impuesto); //sistema/impuestos
 }
