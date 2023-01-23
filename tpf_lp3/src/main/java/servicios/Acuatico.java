@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 public class Acuatico extends Transporte{
 	public Acuatico() {
 		super();
+		this.medio_transporte="acuatico";
 	}
 
 }

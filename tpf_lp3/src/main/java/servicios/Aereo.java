@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 public class Aereo extends Transporte{
 	public Aereo() {
 		super();
+		this.medio_transporte="aereo";
 	}
 
 }
