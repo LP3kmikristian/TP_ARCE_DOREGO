@@ -1,9 +1,17 @@
 package clases;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Impuesto {
 	String nombre_impuesto;
 	String tipo_producto; // tipo de producto sobre el cual se aplica el impuesto
 	public Double porcentaje_a_cobrar;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long id_impuesto;
 	
 	public String getNombre_impuesto() {

@@ -1,7 +1,9 @@
 package usuarios;
 
 import clases.Usuario;
+import javax.persistence.Entity;
 
+@Entity
 public class Administrador extends Usuario{
 	
 	public  Administrador() {

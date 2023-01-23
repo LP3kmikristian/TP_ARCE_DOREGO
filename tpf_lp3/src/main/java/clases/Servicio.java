@@ -1,5 +1,7 @@
 package clases;
+import javax.persistence.Entity;
 
+@Entity
 public class Servicio {
 	public String tipo;
 	Double honorarios;

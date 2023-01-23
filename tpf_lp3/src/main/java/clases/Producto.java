@@ -1,7 +1,14 @@
 package clases;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Producto {
 	public String nombre;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int id;
 	public Double precio_total;
 	public String tipo_producto;

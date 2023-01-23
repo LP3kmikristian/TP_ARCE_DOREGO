@@ -1,10 +1,18 @@
 package clases;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Organizacion {
 	String nombre_organizacion;
 	String tipo_organizacion;
 	String direccion;
 	int telefono;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id_organizacion;
 	
 	public String getTipo_organizacion() {

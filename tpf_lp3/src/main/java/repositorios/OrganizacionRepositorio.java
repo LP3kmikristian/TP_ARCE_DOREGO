@@ -13,5 +13,4 @@ import clases.Organizacion;
 public interface OrganizacionRepositorio extends CrudRepository<Organizacion, Long>{
 	List<Organizacion> findAll();
 	List<Organizacion> organizacionPorTipo(String tipo);
-
 }

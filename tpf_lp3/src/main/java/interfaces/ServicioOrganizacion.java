@@ -3,19 +3,25 @@ package interfaces;
 import java.util.List;
 
 import clases.Organizacion;
+import clases.Usuario;
 
 public interface ServicioOrganizacion {
-	List<Organizacion> buscarOrganizaciones();
+	List<Organizacion> buscarOrganizacion();
 	
 	//@get -> devuelve una lista de todas las Organizaciones de tipo "tipo"
-	List<Organizacion> buscarOrganizaciones(String tipo);
+	List<Organizacion> buscarOrganizacionPorTipo(String tipo);
 	
 	//@post -> crear una organizacion
-	Boolean crearOrganizaciones(Organizacion o1);
+	Boolean crearOrganizacion(Organizacion o1);
 	
-	//@put -> editar una organizacion: se devuelven los datos de la
-	Boolean editarOrganizaciones(Organizacion o1); 
+	//@put -> editar una organizacion: se devuelve verdadero o falso
+	Boolean editarOrganizacion(Organizacion o1); 
 	
 	//@delete -> eliminar una organizacion
-	Boolean eliminarOrganizaciones(long id_organizacion);
+	Boolean eliminarOrganizacion(Long id_organizacion);
+	
+	//@put -> se agrega un usuario a la organizacion
+	Boolean agregarUsuario(Long id_usuario, Long id_organizacion);
+	
+	
 }
