@@ -3,7 +3,6 @@ package interfaces;
 import java.util.List;
 
 import clases.Organizacion;
-import clases.Usuario;
 
 public interface ServicioOrganizacion {
 	List<Organizacion> buscarOrganizacion();

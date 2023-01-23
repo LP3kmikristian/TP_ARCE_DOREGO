@@ -7,15 +7,15 @@ import clases.Presupuesto;
 
 public interface ServicioPresupuesto {
 	//@get -> devuelve la lista del pedido de productos
-	List<Presupuesto> getPresupuestos();
+	List<Presupuesto> listarPresupuestos();
 					
 	//@post -> crea un nuevo producto
-	Boolean crearPresupuestos(Presupuesto p1);
+	Boolean crearPresupuesto(Presupuesto p1);
 	
 	//@put
-	Boolean actualizarPresupuesto(Presupuesto p1);
+	Boolean editarPresupuesto(Presupuesto p1);
 	
 	//@delete -> elimina un producto
-	Boolean eliminarPresupuestos(long id_presupuesto);
+	Boolean eliminarPresupuesto(long id_presupuesto);
 
 }

@@ -49,7 +49,7 @@ public class ServicioUsuarioImplement implements ServicioUsuario{
 	@Override
 	public Boolean actualizarAdministrador(Administrador a1) {
 		// buscamos el administrador que se quiere actualizar
-		Optional<Usuario> usuarioActual= repoUsuario.findById(a1.getId());
+		Optional<Usuario> usuarioActual= repoUsuario.findById(a1.getId_usuario());
 		// si existe entonces se actualiza y se retorna true
 		if (usuarioActual.isPresent()){
 			repoUsuario.save(a1);
@@ -61,7 +61,7 @@ public class ServicioUsuarioImplement implements ServicioUsuario{
 	@Override
 	public Boolean actualizarAuditor(Auditor a1) {
 		// buscamos el auditor que se quiere actualizar
-		Optional<Usuario> usuarioActual= repoUsuario.findById(a1.getId());
+		Optional<Usuario> usuarioActual= repoUsuario.findById(a1.getId_usuario());
 		// si existe entonces se actualiza y se retorna true
 		if (usuarioActual.isPresent()){
 			repoUsuario.save(a1);
@@ -73,7 +73,7 @@ public class ServicioUsuarioImplement implements ServicioUsuario{
 	@Override
 	public Boolean actualizarDespachante(Despachante d1) {
 		// buscamos el despachante que se quiere actualizar
-		Optional<Usuario> usuarioActual= repoUsuario.findById(d1.getId());
+		Optional<Usuario> usuarioActual= repoUsuario.findById(d1.getId_usuario());
 		// si existe entonces se actualiza y se retorna true
 		if (usuarioActual.isPresent()){
 			repoUsuario.save(d1);
@@ -85,7 +85,7 @@ public class ServicioUsuarioImplement implements ServicioUsuario{
 	@Override
 	public Boolean actualizarTransportista(Transportista t1) {
 		// buscamos el transportista que se quiere actualizar
-		Optional<Usuario> usuarioActual= repoUsuario.findById(t1.getId());
+		Optional<Usuario> usuarioActual= repoUsuario.findById(t1.getId_usuario());
 		// si existe entonces se actualiza y se retorna true
 		if (usuarioActual.isPresent()){
 			repoUsuario.save(t1);
