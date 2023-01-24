@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import clases.Impuesto;
 
 @Repository
-@RepositoryRestResource(path="/organizacion")
+@RepositoryRestResource(collectionResourceRel = "impuesto", path = "impuesto")
 
 public interface ImpuestoRepositorio extends CrudRepository<Impuesto, Long>{
 	List<Impuesto> findAll();

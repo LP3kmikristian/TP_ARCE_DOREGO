@@ -10,9 +10,18 @@ import javax.persistence.Id;
 public class Presupuesto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long id_presupesto;
-	List<Producto> pedido;
+	public Long id_presupesto;
+	public Long idUsuario; // debe ser un despachante
+	public List<Producto> pedido;
+	public String procedencia_pedido;
+	public String destino_pedido;
 	
+	public Long getIdUsuario() {
+		return getIdUsuario();
+	}
+	public void setIdUsuario(Long idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 	public Long getId_presupesto() {
 		return id_presupesto;
 	}
@@ -26,6 +35,19 @@ public class Presupuesto {
 	public void setPedido(List<Producto> pedido) {
 		this.pedido = pedido;
 	}
+	public String getProcedencia_pedido() {
+		return procedencia_pedido;
+	}
+	public void setProcedencia_pedido(String procedencia_pedido) {
+		this.procedencia_pedido = procedencia_pedido;
+	}
+	public String getDestino_pedido() {
+		return destino_pedido;
+	}
+	public void setDestino_pedido(String destino_pedido) {
+		this.destino_pedido = destino_pedido;
+	}
+	
 	
 	
 	

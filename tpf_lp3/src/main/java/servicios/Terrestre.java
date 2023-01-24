@@ -7,5 +7,6 @@ public class Terrestre extends Transporte{
 		super();
 		this.medio_transporte="terrestre";
 	}
+	
 
 }

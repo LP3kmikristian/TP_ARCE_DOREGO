@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import clases.Organizacion;
 
 @Repository
-@RepositoryRestResource(path="/organizacion")
+@RepositoryRestResource(collectionResourceRel = "organizacion", path = "organizacion")
 public interface OrganizacionRepositorio extends CrudRepository<Organizacion, Long>{
 	List<Organizacion> findAll();
 	List<Organizacion> organizacionPorTipo(String tipo);

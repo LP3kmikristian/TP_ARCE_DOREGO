@@ -10,7 +10,9 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Long id_usuario;
-	public String rol; // {"AD", "AU", "TR", "DE"}
+	
+	/* ADMINISTRADOR -> "AD", AUDITOR -> "AU", TRANSPORTISTA -> "TR", DESPACHANTE -> "DE" */
+	public String rol; 
 	
 	public String getNombre_usuario() {
 		return nombre_usuario;

@@ -12,7 +12,7 @@ public class Impuesto {
 	public Double porcentaje_a_cobrar;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public long id_impuesto;
+	public long id;
 	
 	public String getNombre_impuesto() {
 		return nombre_impuesto;
@@ -33,10 +33,10 @@ public class Impuesto {
 		this.porcentaje_a_cobrar = porcentaje_a_cobrar;
 	}
 	public long getId_impuesto() {
-		return id_impuesto;
+		return id;
 	}
-	public void setId_impuesto(long id_impuesto) {
-		this.id_impuesto = id_impuesto;
+	public void setId_impuesto(long id) {
+		this.id = id;
 	}
 	
 

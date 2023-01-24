@@ -11,15 +11,13 @@ import clases.Impuesto;
 @RepositoryRestResource(path="/impuesto")
 
 public interface ServicioImpuesto {
-	//@get -> devuelve la lista de los diferentes tipos de impuestos
-	List<Impuesto> buscarImpuestos(); // sistema/impuestos
+	List<Impuesto> listarImpuesto();
+	
+	Impuesto buscarImpuesto(long id_impuesto);
 			
-	//@post -> definir un impuesto nuevo en la lista de impuestos
-	Boolean crearImpuestos(Impuesto i1); // sistema/impuestos
+	Boolean crearImpuesto(Impuesto i1);
 			
-	//@put -> editar un impuesto en la lista de impuestos
-	Boolean editarImpuestos(Impuesto i1); // sistema/impuestos
+	Boolean editarImpuesto(Impuesto i1); 
 			
-	//@delete -> eliminar un impuesto en la lista de impuestos
-	Boolean eliminarImpuestos(long id_impuesto); //sistema/impuestos
+	Boolean eliminarImpuesto(long id_impuesto); 
 }

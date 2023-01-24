@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import clases.Usuario;
 
 @Repository
-@RepositoryRestResource(path="/usuario")
+@RepositoryRestResource(collectionResourceRel = "usuario", path = "usuario")
 public interface UsuarioRepositorio extends CrudRepository<Usuario, Long>{
 	List<Usuario> usuarioPorRol(String rol); // se devuelve la lista de usuarios que tienen el mismo rol
 	

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class Almacenamiento extends Servicio{
+	long id_almacenamiento;
 	Double precio_por_tipo_mercaderia;
 	Double precio_por_dia;
 	public Almacenamiento() {
@@ -12,6 +13,17 @@ public class Almacenamiento extends Servicio{
 		this.tipo="al";
 	}
 	
+	
+	public long getId_almacenamiento() {
+		return id_almacenamiento;
+	}
+
+
+	public void setId_almacenamiento(long id_almacenamiento) {
+		this.id_almacenamiento = id_almacenamiento;
+	}
+
+
 	public Double getPrecio_por_tipo_mercaderia() {
 		return precio_por_tipo_mercaderia;
 	}

@@ -13,11 +13,8 @@ public class Producto {
 	public Double precio_total;
 	public String tipo_producto;
 	public String descripcion;
-	public Double peso;
+	public Double peso_unitario;
 	public int cantidad;
-	public String procedencia;
-	public String destino;
-	
 	
 	public String getNombre() {
 		return nombre;
@@ -51,28 +48,16 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 	public Double getPeso() {
-		return peso;
+		return peso_unitario;
 	}
 	public void setPeso(Double peso) {
-		this.peso = peso;
+		this.peso_unitario = peso;
 	}
 	public int getCantidad() {
 		return cantidad;
 	}
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
-	}
-	public String getProcedencia() {
-		return procedencia;
-	}
-	public void setProcedencia(String procedencia) {
-		this.procedencia = procedencia;
-	}
-	public String getDestino() {
-		return destino;
-	}
-	public void setDestino(String destino) {
-		this.destino = destino;
 	}
 
 }
