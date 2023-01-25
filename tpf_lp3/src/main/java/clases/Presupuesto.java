@@ -1,51 +1,55 @@
 package clases;
 
+import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
+
 public class Presupuesto {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id_presupesto;
-	public Long idUsuario; // debe ser un despachante
-	public List<Producto> pedido;
-	public String procedencia_pedido;
-	public String destino_pedido;
+	long id_pedido;
+	Double total_impuestos;
+	Double sub_total;
+	ArrayList<String> opcionesTransporte;
+	ArrayList<String> opcionesAlmacenamiento;
 	
-	public Long getIdUsuario() {
-		return getIdUsuario();
+
+	public long getId_pedido() {
+		return id_pedido;
 	}
-	public void setIdUsuario(Long idUsuario) {
-		this.idUsuario = idUsuario;
+
+	public void setId_pedido(long id_pedido) {
+		this.id_pedido = id_pedido;
 	}
-	public Long getId_presupesto() {
-		return id_presupesto;
+
+	public Double getTotal_impuestos() {
+		return total_impuestos;
 	}
-	public void setId_presupesto(Long id_presupesto) {
-		this.id_presupesto = id_presupesto;
+
+	public void setTotal_impuestos(Double total_impuestos) {
+		this.total_impuestos = total_impuestos;
 	}
-	
-	public List<Producto> getPedido() {
-		return pedido;
+
+	public Double getSub_total() {
+		return sub_total;
 	}
-	public void setPedido(List<Producto> pedido) {
-		this.pedido = pedido;
+
+	public void setSub_total(Double sub_total) {
+		this.sub_total = sub_total;
 	}
-	public String getProcedencia_pedido() {
-		return procedencia_pedido;
+
+	public ArrayList<String> getOpcionesTransporte() {
+		return opcionesTransporte;
 	}
-	public void setProcedencia_pedido(String procedencia_pedido) {
-		this.procedencia_pedido = procedencia_pedido;
+
+	public void setOpcionesTransporte(ArrayList<String> opcionesTransporte) {
+		this.opcionesTransporte = opcionesTransporte;
 	}
-	public String getDestino_pedido() {
-		return destino_pedido;
+
+	public ArrayList<String> getOpcionesAlmacenamiento() {
+		return opcionesAlmacenamiento;
 	}
-	public void setDestino_pedido(String destino_pedido) {
-		this.destino_pedido = destino_pedido;
+
+	public void setOpcionesAlmacenamiento(ArrayList<String> opcionesAlmacenamiento) {
+		this.opcionesAlmacenamiento = opcionesAlmacenamiento;
 	}
 	
 	

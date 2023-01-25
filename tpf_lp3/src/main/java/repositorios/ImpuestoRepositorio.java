@@ -13,5 +13,6 @@ import clases.Impuesto;
 
 public interface ImpuestoRepositorio extends CrudRepository<Impuesto, Long>{
 	List<Impuesto> findAll();
+	Impuesto findByIdProducto(long id_producto);
 
 }

@@ -9,7 +9,7 @@ public class Producto {
 	public String nombre;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int id;
+	public long id;
 	public Double precio_total;
 	public String tipo_producto;
 	public String descripcion;
@@ -22,7 +22,7 @@ public class Producto {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {
@@ -47,10 +47,10 @@ public class Producto {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public Double getPeso() {
+	public Double getPeso_unitario() {
 		return peso_unitario;
 	}
-	public void setPeso(Double peso) {
+	public void setPeso_unitario(Double peso) {
 		this.peso_unitario = peso;
 	}
 	public int getCantidad() {

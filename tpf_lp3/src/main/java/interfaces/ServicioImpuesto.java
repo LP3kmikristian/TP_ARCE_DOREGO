@@ -2,13 +2,8 @@ package interfaces;
 
 import java.util.List;
 
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.stereotype.Repository;
-
 import clases.Impuesto;
 
-@Repository
-@RepositoryRestResource(path="/impuesto")
 
 public interface ServicioImpuesto {
 	List<Impuesto> listarImpuesto();

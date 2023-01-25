@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import clases.Pedido;
 import clases.Presupuesto;
 import interfaces.ServicioPresupuesto;
 @RestController
@@ -31,17 +32,8 @@ public class PresupuestoController {
 			value = "/crearPresupuesto",
 			consumes = {MediaType.APPLICATION_JSON_VALUE},
 			produces = {MediaType.APPLICATION_JSON_VALUE})
-	public Boolean crearPresupuesto(@RequestBody Presupuesto p1) {
+	public Boolean crearPresupuesto(@RequestBody Pedido p1) {
 		servicioPresu.crearPresupuesto(p1);
-		return true;
-	}
-	
-	@PutMapping(
-			value = "/editarPresupuesto",
-			consumes = {MediaType.APPLICATION_JSON_VALUE},
-			produces = {MediaType.APPLICATION_JSON_VALUE})
-	public Boolean editarPresupuesto(@RequestBody Presupuesto p1) {
-		servicioPresu.editarPresupuesto(p1);
 		return true;
 	}
 

@@ -6,12 +6,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import clases.Pedido;
 import clases.Presupuesto;
 import clases.Producto;
 import clases.Usuario;
 import repositorios.ImpuestoRepositorio;
 import repositorios.PresupuestoRepositorio;
 import repositorios.UsuarioRepositorio;
+import Utilidades.Utils;
 
 
 public class ServicioPresupuestoImplement implements ServicioPresupuesto{
@@ -31,9 +33,9 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 	}
 	
 	@Override
-	public Presupuesto buscarPresupuesto(long id_presupuesto) {
+	public Presupuesto buscarPresupuesto(long id_pedido) {
 		// retorna el impuesto solicitado
-		Optional<Presupuesto> p1= repoPresupuesto.findById(id_presupuesto);
+		Optional<Presupuesto> p1= repoPresupuesto.findById(id_pedido);
 		if (p1.isPresent()) {
 			return p1.get();
 		}
@@ -41,25 +43,24 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 	}
 
 	@Override
-	public Boolean crearPresupuesto(Presupuesto p1) {
-		// guardamos el nuevo presupuesto y retornamos true
-		//repoPresupuesto.save(p1);
+	public Presupuesto crearPresupuesto(Pedido p1) {
 		// se debe verificar que el usuario que crea el Presupuesto es un Despachante
 		Optional<Usuario> usuario_N = repoUsuario.findById(p1.getIdUsuario());
 		// si no se encuentra el usuario no se crea el presupuesto
 		if(usuario_N.isEmpty()) {
 			System.out.println("Se necesitan permisos de Despachante para crear presupuestos");
 		}
-		// existe el usuario
+		// existe el usuario entonces se obtienen todos sus datos
 		Usuario usuario = usuario_N.get();
 		
 		// se verifica el rol del usuario
 		if(Objects.equals(usuario.getRol(), "DE")) {
-			// se obtiene el id del presupuesto
-			
-			
+			Presupuesto presu1 = new Presupuesto();
+			presu1=Utils.generarPresupuesto(p1);
+			repoPresupuesto.save(presu1);
+			return presu1;
 			}
-		return true;
+		return null;
 	}
 
 	@Override
@@ -70,18 +71,6 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 		if(buscarPresupuesto.isPresent()) {
 			repoPresupuesto.deleteById(id_presupuesto);
 			return true;
-		}
-		else return false;
-	}
-
-	@Override
-	public Boolean editarPresupuesto(Presupuesto p1) {
-		// buscamos el presupuesto que se quiere actualizar
-		Optional<Presupuesto> presupuestoActual= repoPresupuesto.findById(p1.getId_presupesto());
-		// si existe entonces se actualiza y se retorna true
-		if (presupuestoActual.isPresent()){
-			repoPresupuesto.save(p1);
-			return true;	
 		}
 		else return false;
 	}
