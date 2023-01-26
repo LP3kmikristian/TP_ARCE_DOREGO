@@ -13,8 +13,6 @@ import usuarios.Despachante;
 import usuarios.Transportista;
 
 
-@Repository
-@RepositoryRestResource(path="/usuario")
 public interface ServicioUsuario {
 	
 	// @put
