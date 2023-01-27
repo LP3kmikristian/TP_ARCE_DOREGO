@@ -22,25 +22,51 @@ public class AlmacenamientoController {
 	// ALMACENAMIENTO
 	@RequestMapping(value="/listarAlmacenamiento", method=RequestMethod.GET)
 	public List<Almacenamiento> todosTransporte(){
-		return servicioAlmacenam.todosAlmacenamiento();
+		try {
+		return servicioAlmacenam.todosAlmacenamiento();}
+		catch(Exception e){
+			System.out.println("listarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}
 	}
 	@RequestMapping(value="/buscarAlmacenamiento/{id}", method=RequestMethod.GET)
 	public Almacenamiento buscarAlmacenamiento(@PathVariable("id") long id) {
-		return servicioAlmacenam.buscarAlmacenamiento(id);
+		try {
+		return servicioAlmacenam.buscarAlmacenamiento(id);}
+	catch(Exception e) {
+		System.out.println("buscarAlmacenamiento: Error al realizar operacion \n");
+		return null;
+		}
 	}
 	@PostMapping("/crearAlmacenamiento")
 	public Boolean crearAlmacenamiento(@RequestBody Almacenamiento a1) {
+		try {
 		servicioAlmacenam.crearAlmacenamiento(a1);
-		return true;
+		return true;}
+		catch(Exception e) {
+			System.out.println("crearAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}
 		
 	}
 	@PutMapping("/editarAlmacenamiento")
 	public Boolean editarAlmacenamiento(@RequestBody Almacenamiento a1) {
-		return servicioAlmacenam.editarAlmacenamiento(a1);
+		try {
+		return servicioAlmacenam.editarAlmacenamiento(a1);}
+		catch(Exception e) {
+			System.out.println("editarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}
 	}
 		
 	@DeleteMapping("/eliminarAlmacenamiento/{id}")
 	public Boolean eliminarAlmacenamiento(@PathVariable("id") long id_almacenamiento) {
+		try {
 		return servicioAlmacenam.eliminarAlmacenamiento(id_almacenamiento);
+		}
+		catch(Exception e) {
+			System.out.println("eliminarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}
 	}
 }

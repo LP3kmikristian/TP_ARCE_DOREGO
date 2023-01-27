@@ -27,19 +27,32 @@ public class PresupuestoController {
 	
 	@RequestMapping(value="/listarPresupuestos", method=RequestMethod.GET)
 	public List<Presupuesto> listarPresupuesto() {
-		return servicioPresu.listarPresupuesto();
+		try {
+		return servicioPresu.listarPresupuesto();}
+		catch(Exception e) {
+			System.out.println("listarPresupuesto: Error al realizar operacion \n");
+			return null;
+			}
 	}
 	
 	@PostMapping("/crearPresupuesto")
 	public Presupuesto crearPresupuesto(@RequestBody Pedido p1) {
-		return servicioPresu.crearPresupuesto(p1);
-		
+		try {
+		return servicioPresu.crearPresupuesto(p1);}
+		catch(Exception e) {
+			System.out.println("crearPresupuesto: Error al realizar operacion \n");
+			return null;
+			}
 	}
 
 	@DeleteMapping("/eliminarPresupuesto/{id}")
 	public Boolean eliminarPresupuesto(@PathVariable("id") Long id) {
-		return servicioPresu.eliminarPresupuesto(id);
-		
+		try {
+		return servicioPresu.eliminarPresupuesto(id);}
+		catch(Exception e) {
+			System.out.println("eliminarPresupuesto: Error al realizar operacion \n");
+			return null;
+			}
 	}
 
 }

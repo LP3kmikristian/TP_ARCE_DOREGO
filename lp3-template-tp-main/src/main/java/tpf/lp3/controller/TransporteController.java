@@ -29,31 +29,54 @@ public class TransporteController {
 	
 	@RequestMapping(value="/listarTransporte", method=RequestMethod.GET)
 	public List<Transporte> todosTransporte(){
-		return servicioTransport.todosTransporte();
+		try {
+		return servicioTransport.todosTransporte();}
+		catch(Exception e) {
+			System.out.println("listarPresupuesto: Error al realizar operacion \n");
+			return null;
+			}
 	}
 	
 	@RequestMapping(value="/buscarTransporte/{id}", method=RequestMethod.GET)
 	public Transporte buscarTransporte(@PathVariable("id") Long id) {
-		return servicioTransport.buscarTransporte(id);
+		try {
+		return servicioTransport.buscarTransporte(id);}
+		catch(Exception e) {
+			System.out.println("buscarTransporte: Error al realizar operacion \n");
+			return null;
+			}
 	}
 	@PostMapping("/crearTransporte")
 	public Transporte crearTransporte(@RequestBody Transporte t1) {
+		try {
 		servicioTransport.crearTransporte(t1);
-		return t1;
+		return t1;}
+		catch(Exception e) {
+			System.out.println("crearTransporte: Error al realizar operacion \n");
+			return null;
+			}
 	}
 	
 	@PutMapping("/editarTransporte")
 	public Boolean editarTransporte(@RequestBody Transporte t1) {
+		try {
 		servicioTransport.editarTransporte(t1);
-		return true;
+		return true;}
+		catch(Exception e) {
+			System.out.println("editarTransporte: Error al realizar operacion \n");
+			return null;
+			}
 	}
 	
 	@DeleteMapping("/eliminarTransporte/{id}")
 	public Boolean eliminarTransporte(@PathVariable("id") Long id) {
+		try {
 		servicioTransport.eliminarTransporte(id);
-		return true;
+		return true;}
+		catch(Exception e) {
+			System.out.println("eliminarTransporte: Error al realizar operacion \n");
+			return null;
+			}
 	}
 	
-	
-
 }
