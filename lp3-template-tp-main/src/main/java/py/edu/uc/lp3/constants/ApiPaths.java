@@ -11,15 +11,9 @@ public class ApiPaths {
 	public static final String TRANSPORTE = BASE_API + "/transporte";
 	public static final String ALMACENAMIENTO = BASE_API + "/almacenamiento";
 	public static final String IMPUESTO = BASE_API + "/impuesto";
+	public static final String SERVICIO = BASE_API + "/servicio";
+	public static final String PRODUCTO = BASE_API + "/producto";
 	
-	
-	public static final String PERSONA = BASE_API + "/persona";
 
-	//	
-	public static final String LOGIN = BASE_API + "/login";
-	
-	
-	//Operaciones con aulas
-	public static final String AULA = BASE_API + "/aula";
 
 }

@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
 import py.edu.uc.lp3.constants.ApiPaths;
-import tpf.lp3.clases.Pedido;
 import tpf.lp3.clases.Presupuesto;
 import tpf.lp3.interfaces.ServicioPresupuesto;
 
@@ -27,32 +29,19 @@ public class PresupuestoController {
 	
 	@RequestMapping(value="/listarPresupuestos", method=RequestMethod.GET)
 	public List<Presupuesto> listarPresupuesto() {
-		try {
-		return servicioPresu.listarPresupuesto();}
-		catch(Exception e) {
-			System.out.println("listarPresupuesto: Error al realizar operacion \n");
-			return null;
-			}
+		return servicioPresu.listarPresupuesto();
 	}
 	
 	@PostMapping("/crearPresupuesto")
-	public Presupuesto crearPresupuesto(@RequestBody Pedido p1) {
-		try {
-		return servicioPresu.crearPresupuesto(p1);}
-		catch(Exception e) {
-			System.out.println("crearPresupuesto: Error al realizar operacion \n");
-			return null;
-			}
+	public @ResponseBody Presupuesto crearPresupuesto(@RequestBody Presupuesto p1){//Pedido p1) {
+		return servicioPresu.crearPresupuesto(p1);
+		
 	}
 
 	@DeleteMapping("/eliminarPresupuesto/{id}")
 	public Boolean eliminarPresupuesto(@PathVariable("id") Long id) {
-		try {
-		return servicioPresu.eliminarPresupuesto(id);}
-		catch(Exception e) {
-			System.out.println("eliminarPresupuesto: Error al realizar operacion \n");
-			return null;
-			}
+		return servicioPresu.eliminarPresupuesto(id);
+		
 	}
 
 }

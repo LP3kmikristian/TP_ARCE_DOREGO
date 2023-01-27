@@ -24,53 +24,29 @@ public class OrganizacionController {
 	
 	@RequestMapping(value="/listarOrganizacion", method=RequestMethod.GET)
 	public List<Organizacion> listarOrganizacion() {
-		try {
-		return servicioOrg.listarOrganizacion();}
-		catch(Exception e) {
-			System.out.println("listarOrganizacion: Error al realizar operacion \n");
-			return null;
-			}
+		return servicioOrg.listarOrganizacion();
 	}
 	
 	@RequestMapping(value="/buscarOrganizacion/{tipo}", method=RequestMethod.GET)
 	public List<Organizacion> buscarOrganizacion(@PathVariable("tipo") String tipo) {
-		try {
-		return servicioOrg.buscarOrganizacionPorTipo(tipo);}
-		catch(Exception e) {
-			System.out.println("buscarOrganizacion: Error al realizar operacion \n");
-			return null;
-			}
+		return servicioOrg.buscarOrganizacionPorTipo(tipo);
 	}
 	
 	@PostMapping("/crearOrganizacion")
 	public Boolean crearOrganizacion(@RequestBody Organizacion o1) {
-		try {
 		servicioOrg.crearOrganizacion(o1);
-		return true;}
-		catch(Exception e) {
-			System.out.println("crearOrganizacion: Error al realizar operacion \n");
-			return false;
-			}
+		return true;
 	}
 	
 	@PutMapping("/editarOrganizacion")
 	public Boolean actualizarOrganizacion(@RequestBody Organizacion o1) {
-		try {
 		servicioOrg.editarOrganizacion(o1);
-		return true;}
-		catch(Exception e) {
-			System.out.println("editarOrganizacion: Error al realizar operacion \n");
-			return null;
-			}
+		return true;
 	}
 	
 	@DeleteMapping("/eliminarOrganizacion/{id}")
 	public void eliminarOrganizacion(@PathVariable("id") Long id) {
-		try {
-		servicioOrg.eliminarOrganizacion(id);}
-		catch(Exception e) {
-			System.out.println("eliminarOrganizacion: Error al realizar operacion \n");
-			}
+		servicioOrg.eliminarOrganizacion(id);
 	}
 
 }

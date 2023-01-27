@@ -1,4 +1,5 @@
 package tpf.lp3.clases;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -6,14 +7,15 @@ import javax.persistence.Id;
 
 @Entity
 public class Producto {
-	public String nombre;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(unique=true, nullable=false)
 	public Long id;
+	public String nombre;
 	public Double precio_total;
 	public String tipo_producto;
 	//public String descripcion;
-	public Double peso_unitario;
+	public Double peso;
 	public int cantidad;
 	
 	public String getNombre() {
@@ -22,7 +24,7 @@ public class Producto {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
@@ -47,11 +49,11 @@ public class Producto {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}*/
-	public Double getPeso_unitario() {
-		return peso_unitario;
+	public Double getPeso() {
+		return peso;
 	}
-	public void setPeso_unitario(Double peso) {
-		this.peso_unitario = peso;
+	public void setPeso(Double peso) {
+		this.peso = peso;
 	}
 	public int getCantidad() {
 		return cantidad;

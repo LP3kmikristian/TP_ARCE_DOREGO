@@ -1,8 +1,8 @@
 package tpf.lp3.interfaces;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import tpf.lp3.clases.Pedido;
 import tpf.lp3.clases.Presupuesto;
 
 public interface ServicioPresupuesto {
@@ -11,7 +11,7 @@ public interface ServicioPresupuesto {
 	
 	Presupuesto buscarPresupuesto(long id_presupuesto);
 	
-	Presupuesto crearPresupuesto(Pedido p1);
+	Presupuesto crearPresupuesto(Presupuesto p1);
 	
 	//Boolean editarPresupuesto(Presupuesto p1);
 	
