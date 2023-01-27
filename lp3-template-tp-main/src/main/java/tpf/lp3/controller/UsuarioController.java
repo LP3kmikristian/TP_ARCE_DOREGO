@@ -55,7 +55,7 @@ public class UsuarioController {
 		return servicioUsu.crearTransportista(t1);
 	}
 	
-	@PutMapping("/editarUsuarior/administrador")
+	@PutMapping("/editarUsuario/administrador")
 	public Boolean actualizarAdministrador(@RequestBody Administrador a1) {
 		return servicioUsu.actualizarAdministrador(a1);
 		

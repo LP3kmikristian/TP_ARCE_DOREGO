@@ -18,8 +18,16 @@ public class Transporte {//extends Servicio{
 	public Double precio_por_peso;
 	public String nombre_transporte;
 	public Double peso_maximo;
+	public String chapa;
 	
-	
+
+	public String getChapa() {
+		return chapa;
+	}
+
+	public void setChapa(String chapa) {
+		this.chapa = chapa;
+	}
 
 	public String getMedio() {
 		return medio;

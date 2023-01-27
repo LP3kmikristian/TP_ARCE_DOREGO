@@ -30,7 +30,8 @@ public class AlmacenamientoController {
 	}
 	@PostMapping("/crearAlmacenamiento")
 	public Boolean crearAlmacenamiento(@RequestBody Almacenamiento a1) {
-		return servicioAlmacenam.crearAlmacenamiento(a1);
+		servicioAlmacenam.crearAlmacenamiento(a1);
+		return true;
 		
 	}
 	@PutMapping("/editarAlmacenamiento")
