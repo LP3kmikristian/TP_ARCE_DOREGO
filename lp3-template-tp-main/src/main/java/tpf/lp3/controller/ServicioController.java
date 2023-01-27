@@ -17,7 +17,7 @@ import tpf.lp3.clases.Servicio;
 import tpf.lp3.interfaces.ServiciosAgenciaTransporte;
 import tpf.lp3.servicios.Almacenamiento;
 import tpf.lp3.servicios.Transporte;
-
+/* CONTROLADOR DE LOS ENDPOINTS DE LAS OPERACIONES CRUD RELACIONADAS A LOS SERVICIOS DE LA AGENCIA DE TRANSPORTE */
 @RestController
 @RequestMapping(ApiPaths.SERVICIO)
 public class ServicioController {
@@ -25,55 +25,114 @@ public class ServicioController {
 	@Autowired
 	private ServiciosAgenciaTransporte serviciosAgenTransport;
 	
+	/* Cada ruta se enlaza a una funcion de la interfaz ServiciosAgenciaTransporte */
+	
 	@RequestMapping(value="/listarTransporte", method=RequestMethod.GET)
 	public List<Servicio> todosTransporte(){
-		return serviciosAgenTransport.todosTransporte();
+		try {
+			return serviciosAgenTransport.todosTransporte();
+		}
+		catch(Exception e) {
+			System.out.println("listarTransporte: Error al realizar operacion \n");
+			return null;
+		}
 	}
 	
 	@RequestMapping(value="/buscarTransporte/{id}", method=RequestMethod.GET)
 	public Servicio buscarTransporte(@PathVariable("id") Long id) {
-		return serviciosAgenTransport.buscarTransporte(id);
+		try {
+			return serviciosAgenTransport.buscarTransporte(id);
+		}
+		catch(Exception e) {
+			System.out.println("buscarTransporte: Error al realizar operacion \n");
+			return null;
+		}
 	}
 	@PostMapping("/crearTransporte")
 	public Servicio crearTransporte(@RequestBody Transporte t1) {
-		serviciosAgenTransport.crearTransporte(t1);
-		return t1;
+		try {
+			return serviciosAgenTransport.crearTransporte(t1);
+		}
+		catch(Exception e) {
+			System.out.println("crearTransporte: Error al realizar operacion \n");
+			return null;
+		}
 	}
 	
 	@PutMapping("/editarTransporte")
 	public Servicio editarTransporte(@RequestBody Transporte t1) {
-		return serviciosAgenTransport.editarTransporte(t1);
-		
+		try {
+			return serviciosAgenTransport.editarTransporte(t1);
+		}
+		catch(Exception e) {
+			System.out.println("editarTransporte: Error al realizar operacion \n");
+			return null;
+		}
 	}
 	
 	@DeleteMapping("/eliminarTransporte/{id}")
 	public Boolean eliminarTransporte(@PathVariable("id") Long id) {
-		serviciosAgenTransport.eliminarTransporte(id);
-		return true;
+		try {
+			return serviciosAgenTransport.eliminarTransporte(id);
+		}
+		catch(Exception e) {
+			System.out.println("eliminarTransporte: Error al realizar operacion \n");
+			return null;
+		}
 	}
 	
 	//**** ALMACENAMIENTO ****///
 	@RequestMapping(value="/listarAlmacenamiento", method=RequestMethod.GET)
 	public List<Servicio> todosAlmacenamiento(){
-		return serviciosAgenTransport.todosAlmacenamiento();
+		try {
+			return serviciosAgenTransport.todosAlmacenamiento();
+		}
+		catch(Exception e) {
+			System.out.println("listarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}	
 	}
 	@RequestMapping(value="/buscarAlmacenamiento/{id}", method=RequestMethod.GET)
 	public Servicio buscarAlmacenamiento(@PathVariable("id") long id) {
-		return serviciosAgenTransport.buscarAlmacenamiento(id);
+		try {
+			return serviciosAgenTransport.buscarAlmacenamiento(id);
+		}
+		catch(Exception e) {
+			System.out.println("buscarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}	
 	}
 	@PostMapping("/crearAlmacenamiento")
 	public Servicio crearAlmacenamiento(@RequestBody Almacenamiento a1) {
-		return serviciosAgenTransport.crearAlmacenamiento(a1);
+		try {
+			return serviciosAgenTransport.crearAlmacenamiento(a1);
+		}
+		catch(Exception e) {
+			System.out.println("crearAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}
 		
 	}
 	@PutMapping("/editarAlmacenamiento")
 	public Servicio editarAlmacenamiento(@RequestBody Almacenamiento a1) {
-		return serviciosAgenTransport.editarAlmacenamiento(a1);
+		try {
+			return serviciosAgenTransport.editarAlmacenamiento(a1);
+		}
+		catch(Exception e) {
+			System.out.println("editarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}	
 	}
 		
 	@DeleteMapping("/eliminarAlmacenamiento/{id}")
 	public Boolean eliminarAlmacenamiento(@PathVariable("id") long id_almacenamiento) {
-		return serviciosAgenTransport.eliminarAlmacenamiento(id_almacenamiento);
+		try {
+			return serviciosAgenTransport.eliminarAlmacenamiento(id_almacenamiento);
+		}
+		catch(Exception e) {
+			System.out.println("eliminarAlmacenamiento: Error al realizar operacion \n");
+			return null;
+		}
 	}
 
 }

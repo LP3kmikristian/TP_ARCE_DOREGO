@@ -5,7 +5,7 @@ import java.util.List;
 import tpf.lp3.clases.Servicio;
 import tpf.lp3.servicios.Almacenamiento;
 import tpf.lp3.servicios.Transporte;
-
+/* INTERFAZ DE LOS SERVICIOS DE LA AGENCIA DE TRANSPORTE PARA LAS OPERACIONES CRUD */
 public interface ServiciosAgenciaTransporte {
 	// Todos las operaciones de transporte
 		Servicio crearTransporte(Transporte t1);

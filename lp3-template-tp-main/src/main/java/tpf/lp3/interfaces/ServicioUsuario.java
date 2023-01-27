@@ -7,9 +7,8 @@ import tpf.lp3.usuarios.Auditor;
 import tpf.lp3.usuarios.Despachante;
 import tpf.lp3.usuarios.Transportista;
 
-
+/* INTERFAZ DE USUARIOS PARA LAS OPERACIONES CRUD */
 public interface ServicioUsuario {
-	public Usuario crearUsuario(Usuario usuario);
 	// @put
 	public Usuario crearAdministrador(Administrador a1);
 	public Usuario crearAuditor(Auditor a1);

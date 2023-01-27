@@ -13,11 +13,12 @@ import tpf.lp3.usuarios.Transportista;
 import tpf.lp3.clases.Usuario;
 import tpf.lp3.repositorios.UsuarioRepositorio;
 
-// se implementan las funciones de la interfaz ServicioUsuario
+/* IMPLEMENTACION DE LAS FUNCIONES DECLARADAS EN ServicioImpuesto PARA EL USO DE LAS OPERACIONES DE CRUD*/
+//se marca como @Servicio para que se reconozca en el escaneo
 @Service
 public class ServicioUsuarioImplement implements ServicioUsuario{
 	@Autowired
-	private UsuarioRepositorio repoUsuario;
+	private UsuarioRepositorio repoUsuario; // repositorio de usuarios
 	
 	@Override
 	public Usuario crearAdministrador(Administrador a1) {
@@ -122,12 +123,6 @@ public class ServicioUsuarioImplement implements ServicioUsuario{
 	public List<Usuario> todosUsuarios(String rol) {
 		List<Usuario> listaUsuarios=repoUsuario.findByRol(rol);
 		return listaUsuarios;
-	}
-
-	@Override
-	public Usuario crearUsuario(Usuario usuario) {
-		repoUsuario.save(usuario);
-		return null;
 	}
 
 }

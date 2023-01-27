@@ -11,12 +11,13 @@ public class Organizacion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
-	public Long id;
+	public Long id; // id de la organizacion -> se crea por default
+	public String nombre_organizacion; // nombre de la organizacion
+	public String tipo; // tipo -> {auditora : "AU", despachante: "DE", administradora: "AD", transportista: "TR"}
+	public String direccion; // direccion de la organizacion
+	public int telefono; // telefono de la organizacion
 	
-	public String nombre_organizacion;
-	public String tipo;
-	public String direccion;
-	public int telefono;
+	/* GETTERS Y SETTERS */
 	public Long getId() {
 		return id;
 	}

@@ -7,10 +7,10 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 import tpf.lp3.clases.Impuesto;
-
+ /* INTERFAZ DEL REPOSITORIO DE IMPUESTOS */
 @Repository
 public interface ImpuestoRepositorio extends PagingAndSortingRepository<Impuesto, Long>{
 	List<Impuesto> findAll();
-	//Impuesto ImpuestoByIdProducto(long id_producto);
+	
 
 }

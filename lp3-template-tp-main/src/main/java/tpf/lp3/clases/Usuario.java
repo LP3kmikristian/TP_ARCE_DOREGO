@@ -9,17 +9,15 @@ import javax.persistence.Id;
 public class Usuario {
 	
 	@Id
-	//@NotNull
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique=true, nullable=false)
-	public Long id;
+	public Long id; // id del usuario -> se crea automaticamente
+	public String nombre; // nombre del usuario
+	public String correo; // correo del usuario
+	protected String rol; //rol del usuario ->
+			//ADMINISTRADOR -> "AD", AUDITOR -> "AU", TRANSPORTISTA -> "TR", DESPACHANTE -> "DE" 
 	
-	/* ADMINISTRADOR -> "AD", AUDITOR -> "AU", TRANSPORTISTA -> "TR", DESPACHANTE -> "DE" */
-	
-	public String nombre;
-	public String correo;
-	public long id_organizacion;
-	protected String rol;
+	/* GETTERS Y SETTERS */
 	public Long getId() {
 		return id;
 	}
@@ -37,12 +35,6 @@ public class Usuario {
 	}
 	public void setCorreo(String correo) {
 		this.correo = correo;
-	}
-	public long getId_organizacion() {
-		return id_organizacion;
-	}
-	public void setId_organizacion(long id_organizacion) {
-		this.id_organizacion = id_organizacion;
 	}
 	public String getRol() {
 		return rol;

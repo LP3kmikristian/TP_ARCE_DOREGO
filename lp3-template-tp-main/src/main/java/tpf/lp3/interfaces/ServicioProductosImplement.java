@@ -8,18 +8,23 @@ import org.springframework.stereotype.Service;
 
 import tpf.lp3.clases.Producto;
 import tpf.lp3.repositorios.ProductosRepositorio;
+
+/* IMPLEMENTACION DE LAS FUNCIONES DECLARADAS EN ServicioProductos PARA EL USO DE LAS OPERACIONES DE CRUD*/
+//se marca como @Servicio para que se reconozca en el escaneo
 @Service
 public class ServicioProductosImplement implements ServicioProductos{
 	@Autowired
-	private ProductosRepositorio repoProduct;
+	private ProductosRepositorio repoProduct; // repositorio de productos
 
 	@Override
 	public List<Producto> listarProductos() {
+		// retornamos la lista de todos los productos en el repositorio
 		return repoProduct.findAll();
 	}
 
 	@Override
 	public Producto buscarProducto(Long id) {
+		// retorna el producto solicitado si se encuentra en el repositorio
 		Optional<Producto> t1= repoProduct.findById(id);
 		if(!t1.isEmpty()) {
 			return t1.get();
@@ -30,6 +35,7 @@ public class ServicioProductosImplement implements ServicioProductos{
 
 	@Override
 	public Producto crearProducto(Producto produ) {
+		// guardamos el nuevo producto en el repositorio
 		return repoProduct.save(produ);
 	}
 

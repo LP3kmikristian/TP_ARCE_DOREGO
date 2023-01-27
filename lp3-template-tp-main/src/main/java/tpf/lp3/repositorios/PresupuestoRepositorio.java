@@ -8,9 +8,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import tpf.lp3.clases.Presupuesto;
+/* INTERFAZ DEL REPOSITORIO DE PRESUPUESTO */
 @Repository
-//@RepositoryRestResource(collectionResourceRel = "presupuesto", path = "presupuesto")
-
 public interface PresupuestoRepositorio extends CrudRepository<Presupuesto, Long>{
 	List<Presupuesto> findAll();
 

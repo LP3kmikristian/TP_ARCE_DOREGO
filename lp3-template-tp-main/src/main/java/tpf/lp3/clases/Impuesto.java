@@ -6,16 +6,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class Impuesto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
-	public Long id;
-	public String nombre_impuesto;
+	public Long id; // id del impuesto -> se crea por default
+	public String nombre_impuesto; //nombre del impuesto
 	public String tipo_producto; // tipo de producto sobre el cual se aplica el impuesto
-	public Double porcentaje_a_cobrar;
+	public Double porcentaje_a_cobrar; // porcentaje del impuesto
+	public Double descuento_mercosur; // porcentaje de descuento si el pedido proviene de un pais del mercosur
+	
+	/* GETTERS Y SETTERS */
 	public Long getId() {
 		return id;
 	}
@@ -40,6 +42,13 @@ public class Impuesto {
 	public void setPorcentaje_a_cobrar(Double porcentaje_a_cobrar) {
 		this.porcentaje_a_cobrar = porcentaje_a_cobrar;
 	}
+	public Double getDescuento_mercosur() {
+		return descuento_mercosur;
+	}
+	public void setDescuento_mercosur(Double descuento_mercosur) {
+		this.descuento_mercosur = descuento_mercosur;
+	}
+	
 	
 	
 	

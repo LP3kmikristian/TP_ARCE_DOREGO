@@ -3,7 +3,7 @@ package tpf.lp3.interfaces;
 import java.util.List;
 
 import tpf.lp3.clases.Organizacion;
-
+/* INTERFAZ DE ORGANIZACION PARA LAS OPERACIONES CRUD */
 public interface ServicioOrganizacion {
 	List<Organizacion> listarOrganizacion();
 	
@@ -11,10 +11,10 @@ public interface ServicioOrganizacion {
 	List<Organizacion> buscarOrganizacionPorTipo(String tipo);
 	
 	//@post -> crear una organizacion
-	Boolean crearOrganizacion(Organizacion o1);
+	Organizacion crearOrganizacion(Organizacion o1);
 	
 	//@put -> editar una organizacion: se devuelve verdadero o falso
-	Boolean editarOrganizacion(Organizacion o1); 
+	Organizacion editarOrganizacion(Organizacion o1); 
 	
 	//@delete -> eliminar una organizacion
 	Boolean eliminarOrganizacion(Long id_organizacion);

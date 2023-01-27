@@ -1,48 +1,44 @@
 package tpf.lp3.interfaces;
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import tpf.lp3.Utilidades.Utils;
 import tpf.lp3.clases.Impuesto;
 import tpf.lp3.clases.Presupuesto;
 import tpf.lp3.clases.Producto;
 import tpf.lp3.clases.Servicio;
-import tpf.lp3.clases.Usuario;
+
 import tpf.lp3.repositorios.ImpuestoRepositorio;
 import tpf.lp3.repositorios.PresupuestoRepositorio;
 import tpf.lp3.repositorios.ProductosRepositorio;
 import tpf.lp3.repositorios.ServiciosRepositorio;
-import tpf.lp3.repositorios.UsuarioRepositorio;
-import tpf.lp3.servicios.Almacenamiento;
-import tpf.lp3.servicios.Transporte;
-import tpf.lp3.Utilidades.Utils;
 
 @Service
 public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 	@Autowired
-	private PresupuestoRepositorio repoPresupuesto;
+	private PresupuestoRepositorio repoPresupuesto; // repositorio de presupuesto
 	
 	@Autowired
-	private ImpuestoRepositorio repoImpuesto;
+	private ImpuestoRepositorio repoImpuesto; // respositorio de impuesto
 	
 	@Autowired
-	private ServiciosRepositorio repoServicio;
+	private ServiciosRepositorio repoServicio; // repositorio de servicios
 	
 	@Autowired
-	private ProductosRepositorio repoProducto;
+	private ProductosRepositorio repoProducto; // repositorio de productos
 	
 	@Override
-	public ArrayList<Presupuesto> listarPresupuesto() {
+	public List<Presupuesto> listarPresupuesto() {
 		// retornamos la lista de todos los presupuestos
-		return (ArrayList<Presupuesto>) repoPresupuesto.findAll();
+		return repoPresupuesto.findAll();
 	}
 	
 	@Override
-	public Presupuesto buscarPresupuesto(long id_pedido) {
+	public Presupuesto buscarPresupuesto(Long id_pedido) {
 		// retorna el impuesto solicitado
 		Optional<Presupuesto> p1= repoPresupuesto.findById(id_pedido);
 		if (p1.isPresent()) {
@@ -53,22 +49,31 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 
 	@Override
 	public Presupuesto crearPresupuesto(Presupuesto p1) {
-		
-		Presupuesto presu1 = new Presupuesto();
-		Double sub_total=(double)0, total_impuestos=(double)0, peso=(double)0;
+		Double sub_total=(double)0, peso=(double)0;
 		Producto producto=new Producto();
+		// se verifica si el origen del producto es un pais del mercosur
+		Boolean es_mercosur=Utils.tieneDescuento(p1.getProcedencia_pedido());
+		// se busca el impuesto seleccionado
 		Optional<Impuesto> im=repoImpuesto.findById(p1.getId_impuesto());
 		Impuesto impuesto_pedido=new Impuesto();
+		// se busca el transporte seleccionado
 		Optional<Servicio> transport=repoServicio.findById(p1.getId_transporte());
 		Servicio t1=new Servicio();
+		// se busca el almacenamiento seleccionado
 		Optional<Servicio> almacem=repoServicio.findById(p1.getId_almacenamiento());
 		Servicio a1=new Servicio();
+		
+		// se verifica que todos los id sean correctos
 		if(im.isPresent() && transport.isPresent() && almacem.isPresent()) {
 			impuesto_pedido=im.get();
 			t1=transport.get();
 			a1=almacem.get();
 		}
-		//presu1=Utils.generarPresupuesto(p1);
+		else {
+			System.out.println("Uno de los id ingresados es incorrecto");
+			return null;
+		}
+		// se calcula el sub total del pedido
 		List<Long> lista=p1.getLista();
 		for(int i=0; i<lista.size(); i++) {
 			Optional<Producto> prod=repoProducto.findById(lista.get(i));
@@ -78,26 +83,26 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 				peso+=producto.getPeso();
 			}
 		}
-		if(p1.getDestino_pedido()=="Paraguay"||p1.getDestino_pedido()=="paraguay") {
-			presu1.setOperacion("Importacion");
+		// si el origen del pedido es de un pais del mercosur se le aplica el descuento en los servicios y el el impuesto
+		if(es_mercosur) {
+			p1.setTotal_impuestos(sub_total*(impuesto_pedido.getPorcentaje_a_cobrar()-impuesto_pedido.getDescuento_mercosur()));
+			p1.setTotal_servicios((peso*t1.getPrecio_por_peso())+(peso*a1.getPrecio_por_peso())-((peso*t1.getPrecio_por_peso())+(peso*a1.getPrecio_por_peso())*impuesto_pedido.getDescuento_mercosur()));
 		}
 		else {
-			presu1.setOperacion("Exportacion");
+			p1.setTotal_impuestos(sub_total*impuesto_pedido.getPorcentaje_a_cobrar());
+			p1.setTotal_servicios((peso*t1.getPrecio_por_peso())+(peso*a1.getPrecio_por_peso()));
 		}
-		
-		presu1.setTotal_impuestos(sub_total*impuesto_pedido.getPorcentaje_a_cobrar());
-		presu1.setTotal_servicios((peso*t1.getPrecio())+(peso*a1.getPrecio()));
-		presu1.setSub_total(sub_total);
-		//presu1.setId(p1.getId());
-		presu1.setTOTAL(sub_total+presu1.getTotal_impuestos()+presu1.getTotal_servicios());
-		repoPresupuesto.save(presu1);
-		return presu1;
-		//return null;
+		p1.setOperacion(Utils.definirOperacion(p1.getProcedencia_pedido()));
+		// se establece el sub total y el total del pedido
+		p1.setSub_total(sub_total);
+		p1.setTOTAL(sub_total+p1.getTotal_impuestos()+p1.getTotal_servicios());
+		// se guarda el presupuesto en el respositorio y se retorna
+		repoPresupuesto.save(p1);
+		return p1;
 	}
 
 	@Override
-	public Boolean eliminarPresupuesto(long id_presupuesto) {
-		// buscamos el presupuesto por id
+	public Boolean eliminarPresupuesto(Long id_presupuesto) {
 		Optional<Presupuesto> buscarPresupuesto= repoPresupuesto.findById(id_presupuesto);
 		// si existe entonces se elimina y se retorna true si no se retorna false
 		if(buscarPresupuesto.isPresent()) {

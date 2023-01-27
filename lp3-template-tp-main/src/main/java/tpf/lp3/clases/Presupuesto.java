@@ -15,21 +15,23 @@ public class Presupuesto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(unique=true, nullable=false)
-	public Long id;
+	public Long id; // id del presupuesto -> se crea automaticamente
 	@ElementCollection
 	@CollectionTable(name = "lista")//, joinColumns = @JoinColumn(name = "id")) 
 	@Column(name = "lista") 
-	private List<Long> lista;
-	public String procedencia_pedido;
-	public String destino_pedido;
-	public Long id_impuesto;
-	public Long id_transporte;
-	public Long id_almacenamiento;
-	public Double total_impuestos;
-	public Double sub_total;
-	public Double total_servicios;
-	public String operacion;
-	public Double TOTAL;
+	private List<Long> lista; // lista de los id de los productos del pedido
+	public String procedencia_pedido; // origen del pedido
+	public String destino_pedido; // destino del pedido
+	public Long id_impuesto; // el id del impuesto que se le va a aplicar
+	public Long id_transporte; // el id del transporte seleccionado
+	public Long id_almacenamiento; // el id del almacenamiento seleccionado
+	public Double sub_total; // precio total sin impuestos ni servicios
+	public Double total_impuestos; // precio total del impuesto
+	public Double total_servicios; // precio total de los servicios
+	public String operacion; // si es importacion o exportacion
+	public Double TOTAL; // total a pagar con los impuestos y servicios
+	
+	/* GETTERS Y SETTERS */
 	public Long getId() {
 		return id;
 	}

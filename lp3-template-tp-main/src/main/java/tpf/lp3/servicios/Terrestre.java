@@ -3,9 +3,10 @@ import javax.persistence.Entity;
 
 @Entity
 public class Terrestre extends Transporte{
+	// funcion para asignar el medio de transporte
 	public Terrestre() {
-		super();
-		this.medio="terrestre";
+		super(); // se invoca al constructor de Transporte
+		this.medio="terrestre"; // se establece el medio
 	}
 	
 

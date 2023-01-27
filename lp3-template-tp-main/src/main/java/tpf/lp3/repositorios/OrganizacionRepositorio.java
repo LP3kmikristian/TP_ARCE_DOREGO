@@ -7,10 +7,8 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 import tpf.lp3.clases.Organizacion;
-
+/* INTERFAZ DEL REPOSITORIO DE ORGANIZACION*/
 @Repository
-//@RepositoryRestResource(collectionResourceRel = "organizacion", path = "organizacion")
-
 public interface OrganizacionRepositorio extends PagingAndSortingRepository<Organizacion, Long>{
 	List<Organizacion> findAll();
 	List<Organizacion> findByTipo(String tipo);

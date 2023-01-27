@@ -3,7 +3,7 @@ package tpf.lp3.interfaces;
 import java.util.List;
 
 import tpf.lp3.clases.Producto;
-
+/* INTERFAZ DE PRODUCTOS PARA LAS OPERACIONES CRUD */
 public interface ServicioProductos {
 	List<Producto> listarProductos();
 	
