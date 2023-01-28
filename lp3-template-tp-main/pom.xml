@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>py.edu.uc.lp3</groupId>
-	<artifactId>tp-lp3-template</artifactId>
+	<artifactId>tp-lp3-template3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tp-2020</name>
 	<description>Template Trabajo práctico LP3 UC con JPA</description>

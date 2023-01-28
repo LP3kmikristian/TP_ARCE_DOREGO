@@ -27,6 +27,7 @@ public interface ServicioUsuario {
 	 
 	//@delete
 	public Boolean eliminarUsuario(Long id);
+	public Usuario crearUsuario(Usuario usuario);
 
 				
 

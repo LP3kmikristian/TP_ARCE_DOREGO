@@ -16,7 +16,14 @@ public class Producto {
 	public String tipo_producto; // tipo de producto. EJ: "textil"
 	public Double peso; // peso total del pedido de este producto (kg). 
 						//EJ: PEDIDO DE 3 IMPRESORAS (CADA IMPRESORA PESA 5KG) -> PESO=15 KG
+	public int cantidad;
 	
+	public int getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
 	/* GETTERS Y SETTERS */
 	public String getNombre() {
 		return nombre;

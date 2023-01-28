@@ -34,21 +34,33 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 	@Override
 	public List<Presupuesto> listarPresupuesto() {
 		// retornamos la lista de todos los presupuestos
-		return repoPresupuesto.findAll();
+		try {
+		return repoPresupuesto.findAll();}
+		catch(Exception e) {
+			System.out.println("Servicio listarPresupuesto: error al realizar la operacion");
+		}
+		return null;
 	}
 	
 	@Override
 	public Presupuesto buscarPresupuesto(Long id_pedido) {
 		// retorna el impuesto solicitado
+		try {
 		Optional<Presupuesto> p1= repoPresupuesto.findById(id_pedido);
 		if (p1.isPresent()) {
-			return p1.get();
+			return p1.get();}
 		}
-		else return null;
+		catch(Exception e) {
+			System.out.println("Servicio buscarPresupuesto: error al realizar la operacion");
+			return null;
+		}
+		
+		return null;
 	}
 
 	@Override
 	public Presupuesto crearPresupuesto(Presupuesto p1) {
+		try {
 		Double sub_total=(double)0, peso=(double)0;
 		Producto producto=new Producto();
 		// se verifica si el origen del producto es un pais del mercosur
@@ -98,18 +110,28 @@ public class ServicioPresupuestoImplement implements ServicioPresupuesto{
 		p1.setTOTAL(sub_total+p1.getTotal_impuestos()+p1.getTotal_servicios());
 		// se guarda el presupuesto en el respositorio y se retorna
 		repoPresupuesto.save(p1);
-		return p1;
+		return p1;}
+		catch(Exception e) {
+			System.out.println("Servicio listarPresupuesto: error al realizar la operacion");
+			return null;
+		}
+	
 	}
 
 	@Override
 	public Boolean eliminarPresupuesto(Long id_presupuesto) {
+		try {
 		Optional<Presupuesto> buscarPresupuesto= repoPresupuesto.findById(id_presupuesto);
 		// si existe entonces se elimina y se retorna true si no se retorna false
 		if(buscarPresupuesto.isPresent()) {
 			repoPresupuesto.deleteById(id_presupuesto);
-			return true;
+			return true;}
 		}
-		else return false;
+		catch(Exception e) {
+			System.out.println("Servicio listarPresupuesto: error al realizar la operacion");
+			return false;
+		}
+		return false;
 	}
 
 }

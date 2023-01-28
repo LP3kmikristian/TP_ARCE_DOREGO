@@ -19,42 +19,64 @@ public class ServicioProductosImplement implements ServicioProductos{
 	@Override
 	public List<Producto> listarProductos() {
 		// retornamos la lista de todos los productos en el repositorio
-		return repoProduct.findAll();
+		try {
+		return repoProduct.findAll();}
+		catch(Exception e) {
+			System.out.println("Servicio listarProductos: error al realizar la operacion");
+			return null;
+		}
 	}
 
 	@Override
 	public Producto buscarProducto(Long id) {
+		try {
 		// retorna el producto solicitado si se encuentra en el repositorio
 		Optional<Producto> t1= repoProduct.findById(id);
 		if(!t1.isEmpty()) {
 			return t1.get();
-		}
-		System.out.println("No se encontro el producto");
-		return null;
+		}}
+		catch(Exception e) {
+			System.out.println("No se encontro el producto");
+		return null;}
+	return null;
 	}
 
 	@Override
 	public Producto crearProducto(Producto produ) {
+		try {
 		// guardamos el nuevo producto en el repositorio
-		return repoProduct.save(produ);
+		return repoProduct.save(produ);}
+		catch(Exception e) {
+			System.out.println("Servicio crearProductor: error al realizar la operacion");
+			return null;
+		}
 	}
 
 	@Override
 	public Producto editarProducto(Producto produ) {
+		try {
 		Optional<Producto> transporteActual= repoProduct.findById(produ.getId());
 		// si existe entonces se actualiza y se retorna true
 		if (!transporteActual.isEmpty()){
 			return repoProduct.save(produ);
 				
+		}}
+		catch(Exception e) {
+			System.out.println("Servicio editarProducto: error al realizar la operacion");
+			return null;
 		}
-		else return null;
+		return null;
 	}
 
 	@Override
 	public Boolean eliminarProducto(Long id) {
+		try {
 		repoProduct.deleteById(id);
-		return true;
+		return true;}
+		catch(Exception e) {
+			System.out.println("Servicio listarPresupuesto: error al realizar la operacion");
+			return false;
+		}
 	}
 	
-
 }

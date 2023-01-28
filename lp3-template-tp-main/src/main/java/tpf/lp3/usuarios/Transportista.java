@@ -1,9 +1,7 @@
 package tpf.lp3.usuarios;
 
 import tpf.lp3.clases.Usuario;
-import tpf.lp3.clases.Producto;
 
-import java.util.ArrayList;
 
 import javax.persistence.Entity;
 
@@ -13,7 +11,6 @@ import javax.persistence.Entity;
 @Entity
 public class Transportista extends Usuario{
 	public String miUbicacion;
-	public ArrayList<Producto> listaDeProductosTransportando;
 	
 	// funcion para asignar el rol de transportista
 	public Transportista() {
@@ -29,14 +26,5 @@ public class Transportista extends Usuario{
 	public void setMiUbicacion(String miUbicacion) {
 		this.miUbicacion = miUbicacion;
 	}
-
-	public ArrayList<Producto> getListaDeProductosTransportando() {
-		return listaDeProductosTransportando;
-	}
-
-	public void setListaDeProductosTransportando(ArrayList<Producto> listaDeProductosTransportando) {
-		this.listaDeProductosTransportando = listaDeProductosTransportando;
-	}
-	
 
 }
