@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-08T22:44:53.588Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="8jxCIDUoGh3iRmFxpp_M" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-08T22:47:14.612Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="_ZZOz5DBRG3SPt_uZJxe" version="22.0.4" type="github">
   <diagram name="Page-1" id="plU40Ezx-mP_DqaJDuf5">
-    <mxGraphModel dx="913" dy="892" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2333" dy="1676" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -12,17 +12,6 @@
         </mxCell>
         <mxCell id="H_-c9IdjmHBw7mQhfh1--3" value="Alumno/Tutor" style="html=1;overflow=block;blockSpacing=1;shape=umlActor;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;whiteSpace=nowrap;fontSize=13.3;fontColor=#333333;fontStyle=2;align=center;spacing=0;strokeColor=#333333;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=12;fillColor=#ffffff;strokeWidth=0.8;lucidId=Yu5MdgyV5tNR;" parent="1" vertex="1">
           <mxGeometry x="313" y="-115" width="60" height="135" as="geometry" />
-        </mxCell>
-        <mxCell id="H_-c9IdjmHBw7mQhfh1--4" value="" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;strokeColor=#333333;strokeOpacity=100;strokeWidth=0.8;rounded=1;arcSize=10;edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=block;endFill=1;exitX=1.074;exitY=0.387;exitPerimeter=0;lucidId=Yu5M8hheeUyh;exitDx=0;exitDy=0;" parent="1" source="H_-c9IdjmHBw7mQhfh1--17" edge="1">
-          <mxGeometry width="100" height="100" relative="1" as="geometry">
-            <Array as="points" />
-            <mxPoint x="834" y="250" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="H_-c9IdjmHBw7mQhfh1--5" value="Mis_tutorias()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--4" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="H_-c9IdjmHBw7mQhfh1--6" value="" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;fontFamily=helvetica;strokeColor=#333333;strokeOpacity=100;dashed=1;fixDash=1;dashPattern=16 6;strokeWidth=0.8;rounded=0;startArrow=none;endArrow=none;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0.432;entryPerimeter=0;lucidId=Yu5M4GIAFP0a;" parent="1" source="H_-c9IdjmHBw7mQhfh1--1" target="H_-c9IdjmHBw7mQhfh1--7" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -54,7 +43,7 @@
             <mxPoint x="572" y="129" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="H_-c9IdjmHBw7mQhfh1--12" value="Selecciona &quot;mis tutorias&quot;" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--11" vertex="1">
+        <mxCell id="H_-c9IdjmHBw7mQhfh1--12" value="Selecciona &quot;mis tutorías&quot;" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--11" vertex="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -299,6 +288,18 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="H_-c9IdjmHBw7mQhfh1--67" value="Muestra pantalla de&amp;nbsp;&lt;br&gt;evaluación" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--66" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xQGkih3bfMj6HIeeeXxl-1" value="" style="html=1;jettySize=18;whiteSpace=wrap;fontSize=13;strokeColor=#333333;strokeOpacity=100;strokeWidth=0.8;rounded=1;arcSize=10;edgeStyle=orthogonalEdgeStyle;startArrow=none;endArrow=block;endFill=1;lucidId=Yu5M0A2JVvTe;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="594.5" y="236" as="sourcePoint" />
+            <mxPoint x="831.5" y="237" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xQGkih3bfMj6HIeeeXxl-2" value="Visualizar_tutorías()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" vertex="1" parent="xQGkih3bfMj6HIeeeXxl-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
