@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-08T22:47:14.612Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="_ZZOz5DBRG3SPt_uZJxe" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-08T22:56:24.332Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="W2VU2XfexCAl3F9sQ9GB" version="22.0.4" type="github">
   <diagram name="Page-1" id="plU40Ezx-mP_DqaJDuf5">
-    <mxGraphModel dx="2333" dy="1676" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1615" dy="1283" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -164,7 +164,7 @@
             <mxPoint x="1134" y="560.75" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="H_-c9IdjmHBw7mQhfh1--41" value="Actualizar_BD()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--40" vertex="1">
+        <mxCell id="H_-c9IdjmHBw7mQhfh1--41" value="Actualiza base de datos" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--40" vertex="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -242,7 +242,7 @@
             <mxPoint x="1136.5" y="852.75" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="H_-c9IdjmHBw7mQhfh1--59" value="Cargar_puntaje()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--58" vertex="1">
+        <mxCell id="H_-c9IdjmHBw7mQhfh1--59" value="Actualiza base de datos" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="H_-c9IdjmHBw7mQhfh1--58" vertex="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
