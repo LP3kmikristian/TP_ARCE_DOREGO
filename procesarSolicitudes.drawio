@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-08T22:40:07.376Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="ne99QVd4ku2bLyjEThMd" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-08T22:57:54.215Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="27Xt_eL1D4eicEjW4ZSP" version="22.0.4" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1909" dy="1029" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="700" dy="377" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -184,7 +184,7 @@
             <mxPoint x="510" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KeTWmhBXEFS9zP1yrX2H-48" value="Aceptar Solicitud" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" vertex="1" parent="KeTWmhBXEFS9zP1yrX2H-47">
+        <mxCell id="KeTWmhBXEFS9zP1yrX2H-48" value="AceptarSolicitud()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" vertex="1" parent="KeTWmhBXEFS9zP1yrX2H-47">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="5" y="-9" as="offset" />
           </mxGeometry>
@@ -243,7 +243,7 @@
             <mxPoint x="522.33" y="830" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KeTWmhBXEFS9zP1yrX2H-61" value="Rechazar Solicitud" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" vertex="1" parent="KeTWmhBXEFS9zP1yrX2H-60">
+        <mxCell id="KeTWmhBXEFS9zP1yrX2H-61" value="RechazarSolicitud()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" vertex="1" parent="KeTWmhBXEFS9zP1yrX2H-60">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="5" y="-9" as="offset" />
           </mxGeometry>
