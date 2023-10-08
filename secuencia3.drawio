@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-03T18:50:43.879Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="pVe38TvMmSt3Gr1TRmMJ" version="22.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-08T23:36:53.807Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="Ud7F1nfw1S8VG--0dUWI" version="22.0.4" type="github">
   <diagram name="Page-1" id="sNtBF1NO1MGISq6POtad">
-    <mxGraphModel dx="1500" dy="820" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2100" dy="1148" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -44,7 +44,7 @@
             <mxPoint x="507" y="373" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Y5soAeS5DBWQtz9M2Q7z-17" value="Ingresar datos" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="Y5soAeS5DBWQtz9M2Q7z-16" vertex="1">
+        <mxCell id="Y5soAeS5DBWQtz9M2Q7z-17" value="login()" style="text;html=1;resizable=0;labelBackgroundColor=default;align=center;verticalAlign=middle;fontStyle=2;fontColor=#333333;fontSize=13.3;" parent="Y5soAeS5DBWQtz9M2Q7z-16" vertex="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
